@@ -1,0 +1,14 @@
+{
+  "name": "wintercat8",
+  "description": "유튜버·크리에이터 작업 자동화용 Claude Code 스킬 모음",
+  "owner": {
+    "name": "wintercat8"
+  },
+  "plugins": [
+    {
+      "name": "cutflow-kit",
+      "source": "./plugins/cutflow-kit",
+      "description": "유튜브 영상 자동 편집(CutFlow) 실행 스킬과, 같은 방식의 로컬 자동화 웹앱을 처음부터 만드는 스킬"
+    }
+  ]
+}

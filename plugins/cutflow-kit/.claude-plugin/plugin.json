@@ -1,0 +1,10 @@
+{
+  "name": "cutflow-kit",
+  "description": "유튜브 영상 자동 편집(CutFlow) 실행 스킬과, 같은 방식의 로컬 자동화 웹앱을 처음부터 만드는 스킬",
+  "version": "1.0.0",
+  "author": {
+    "name": "wintercat8"
+  },
+  "repository": "https://github.com/wintercat8/claude-skills",
+  "keywords": ["youtube", "video", "ffmpeg", "shorts", "automation", "fastapi", "korean"]
+}
