@@ -21,7 +21,16 @@ Claude Code에서 실행합니다.
 | `build-local-app` | `/cutflow-kit:build-local-app [앱 설명] [레퍼런스 URL]` | CutFlow를 만든 과정 그대로, 디자인 레퍼런스를 반영한 로컬 자동화 웹앱을 처음부터 만듭니다. FastAPI + 바닐라 JS, 기능별 버튼, API 키로 여는 AI 기능, 폴더 감시 CLI, pytest + GitHub Actions까지 포함합니다. |
 
 - `build-local-app`은 큰 작업이라 **직접 호출할 때만** 실행되도록 설정했습니다 (`disable-model-invocation`).
-- `cutflow` 스킬은 CutFlow 코드가 필요합니다. 현재 폴더가 CutFlow가 아니면 경로를 묻거나, 동의를 받은 뒤 저장소를 받아옵니다.
+- `cutflow` 스킬은 CutFlow 앱 코드가 필요합니다. 현재 폴더가 CutFlow가 아니면 경로를 묻거나, 동의를 받은 뒤 저장소를 받아옵니다.
+  **CutFlow 저장소는 비공개**라서, 접근 권한이 없으면 이 스킬은 쓸 수 없습니다. `build-local-app`은 권한 없이 바로 쓸 수 있습니다.
+
+## 설치 없이 내용만 보기
+
+스킬이 무엇을 시키는지 궁금하면 파일을 바로 읽어보세요.
+
+- [build-local-app/SKILL.md](plugins/cutflow-kit/skills/build-local-app/SKILL.md) — 로컬 자동화 웹앱 만드는 전체 절차
+- [cutflow/SKILL.md](plugins/cutflow-kit/skills/cutflow/SKILL.md) — 영상 자동 편집 실행 절차
+- [examples/project-skill](examples/project-skill) — 같은 스킬을 **플러그인 없이** 내 저장소에 넣는 방식 (`.claude/skills/`)
 
 ## 구조
 
@@ -37,6 +46,9 @@ plugins/cutflow-kit/
       design.md         레퍼런스 → 디자인 토큰 → 구성 요소
       ai-layer.md       API 키로 여는 AI 기능 (Claude)
       testing-ci.md     격리 테스트, 입력 생성, CI 템플릿
+examples/project-skill/
+  README.md             프로젝트 스킬 vs 플러그인 스킬
+  .claude/skills/cutflow/SKILL.md   CutFlow 저장소에 들어 있는 원본 (그대로 복사해 쓸 수 있음)
 ```
 
 ## 주의
